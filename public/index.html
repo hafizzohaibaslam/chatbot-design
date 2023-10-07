@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="./fontawesome.css" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <script src="./fontawesome.js"></script>
+  <title>Document</title>
+</head>
+
+<body class="font-primary h-screen w-screen flex lg:flex-col flex-row
+
+ bg-gray-50 dark:bg-slate-600 dark:border-r-dark3
+
+">
+  <!--Mobile Additional Header-->
+  <header
+    class="hidden lg:px-8 lg:flex lg:items-center lg:justify-between lg:py-4 sm:px-6 lg:sticky lg:top-0 lg:left-0 lg:right-0 bg-white dark:bg-dark1">
+    <button id="mobileSidebarExpandButton">
+      <i class=" cursor-pointer   fa-solid fa-bars fa-xl text-slate-800 dark:text-dark5"></i>
+    </button>
+    <a href="#">
+      <img src="./assets/logo.svg" alt="Tailwind Logo" class="h-10" />
+    </a>
+    <div>
+      <i class=" cursor-pointer   fa-solid fa-circle-half-stroke fa-xl  text-slate-800  dark:text-dark5"></i>
+    </div>
+  </header>
+
+
+
+  <!-- Mobile Sidebar -->
+
+  <aside id="sidebar"
+    class="hidden lg:flex fixed top-0 -left-full bottom-0 h-screen flex-col gap-y-7 bg-gray-50 p-8 border-r-2 border-r-zinc-200 overflow-y-auto w-full max-w-[480px] z-50 transition-all duration-300 dark:bg-dark1 dark:border-none">
+
+    <div class="flex justify-between items-center">
+      <a href="#">
+        <img src="./assets/logo.svg" alt="Tailwind Logo" class="h-9" />
+      </a>
+      <button id="mobileSidebarShrinkButton">
+        <i class=" cursor-pointer   fa-solid fa-x fa-xl text-slate-800 dark:text-dark5"></i>
+      </button>
+    </div>
+
+    <div class="w-5/5 mt-5 flex flex-col border-b-2 border-slate-100 pb-2 ">
+
+      <h1 class="dark:text-slate-300 font-semibold text-[13px] text-black">
+        ChatBot
+      </h1>
+      <p class="dark:text-slate-500 w-[4/5] text-justify mt-2 text-[11px]">
+        This application offers a versatile question-answering function, capable of addressing a wide types of
+        inquiries. All data submitted remains confidential within the Baxter network. The engine behind this bot is
+        constructed using the open-source Llama2 13B model, which has been deployed within the Baxter Private Network.
+      </p>
+    </div>
+
+
+
+    <div class="mt-3 w-full">
+      <h1 class="dark:text-slate-100 font-bold text-[16px] mb-5 text-black">
+        Recent Chats
+      </h1>
+
+      <ul class="mt-1 w-4/5">
+        <li class="my-2">
+          <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+            <i
+              class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+            <h3 class="ml-1 w-4/5 text-[12px]">
+              Lorem ipsum dolor sit amet.
+            </h3>
+          </div>
+        </li>
+        <li class="my-2">
+          <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+            <i
+              class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+            <h3 class="ml-1 w-4/5 text-[12px]">
+              Lorem ipsum dolor sit amet.
+            </h3>
+          </div>
+        </li>
+        <li class="my-2">
+          <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+            <i
+              class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+            <h3 class="ml-1 w-4/5 text-[12px]">
+              Lorem ipsum dolor sit amet.
+            </h3>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="absolute bottom-6 w-4/5 border-t-2 pt-2 ">
+      <ul class="mt-2 w-full flex flex-row gap-x-4 items-center justify-center">
+
+        <li>
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white    fa-sharp fa-signal"></i>
+          </a>
+        </li>
+        <hr />
+        <li class="ml-4">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-xl fa-solid fa-globe"></i>
+          </a>
+        </li>
+        <li class="ml-4">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-solid fa-xl fa-circle-exclamation"></i>
+          </a>
+        </li>
+        <li class="ml-4 mr-4">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-xl fa-solid fa-gear"></i>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+
+  </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Desktop Sidebar -->
+
+  <aside
+    class="fixed top-0  bottom-0 w-[8%] h-screen flex flex-col gap-y-12 bg-gray-50 p-8  overflow-y-auto xl:w-[8%] lg:hidden dark:bg-slate-600 dark:border-r-dark3">
+
+
+    <div class="flex justify-between items-center">
+      <a href="#">
+        <img src="./assets/logo.svg" alt="Tailwind Logo" class="h-9" />
+      </a>
+    </div>
+
+
+
+    <div>
+      <ul class=" flex flex-col gap-y-4">
+        <li class="p-1">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-xl fa-solid fa-file"></i>
+          </a>
+        </li>
+        <hr />
+        <li class="mt-2 p-1">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white fa-xl fa-solid fa-message"></i>
+          </a>
+        </li>
+        <hr />
+        <li class="mt-2 p-1">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white    fa-sharp fa-signal"></i>
+          </a>
+        </li>
+        <hr />
+        <li class="mt-2 p-1">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-xl fa-solid fa-globe"></i>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+
+    <div class="absolute bottom-0">
+      <ul class="mt-6 flex flex-col gap-y-4">
+
+        <li>
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white fa-solid fa-circle-half-stroke fa-xl "></i>
+          </a>
+        </li>
+        <hr />
+        <li class="mt-4">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-solid fa-xl fa-circle-exclamation"></i>
+          </a>
+        </li>
+        <hr />
+        <li class="mt-4 mb-4">
+          <a href="#" class="flex w-full gap-x-3 items-center">
+            <i class=" cursor-pointer   dark:text-slate-400 hover:text-white  fa-xl fa-solid fa-gear"></i>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+
+
+  </aside>
+
+
+
+  <!-- Main Header -->
+
+
+
+  <section
+    class="bg-slate-300 h-[100%] w-[92%] lg:w-[100%] pt-2 pl-5 overflow-hidden pb-0 pr-0 lg:p-0 self-end  lg:relative absolute  right-0  bottom-0 flex flex-row  rounded-tl-[50px] lg:rounded-none ">
+
+
+    <div class="flex flex-col w-[30%] lg:hidden  h-full">
+
+      <div class="w-4/5 mt-16 flex flex-col border-b-2 border-slate-700 pb-3 ">
+
+        <h1 class="dark:text-slate-600 font-semibold text-[15px] text-black">
+          ChatBot
+        </h1>
+        <p class="dark:text-slate-500 w-[250px] text-justify mt-3 text-[13px]">
+          This application offers a versatile question-answering function, capable of addressing a wide types of
+          inquiries. All data submitted remains confidential within the Baxter network. The engine behind this bot is
+          constructed using the open-source Llama2 13B model, which has been deployed within the Baxter Private Network.
+        </p>
+      </div>
+
+      <div class="mt-5 w-full">
+        <h1 class="dark:text-slate-600 font-semibold text-[16px] text-black">
+          Recent Chats
+        </h1>
+
+        <ul class="mt-1 w-4/5">
+          <li class="my-2">
+            <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+              <i
+                class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+              <h3 class="ml-1 w-4/5 text-[12px]">
+                Lorem ipsum dolor sit amet.
+              </h3>
+            </div>
+          </li>
+          <li class="my-2">
+            <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+              <i
+                class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+              <h3 class="ml-1 w-4/5 text-[12px]">
+                Lorem ipsum dolor sit amet.
+              </h3>
+            </div>
+          </li>
+          <li class="my-2">
+            <div class="w-full border rounded-md bg-slate-400 p-4 flex flex-row items-center justify-start">
+              <i
+                class=" cursor-pointer    dark:text-slate-600 w-1/5 text-black font-semibold text-[20px] fa-solid fa-message"></i>
+              <h3 class="ml-1 w-4/5 text-[12px]">
+                Lorem ipsum dolor sit amet.
+              </h3>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class=" bg-gray-50 chat-bot-div dark:bg-slate-600 dark:border-r-dark3 w-[70%] lg:w-full  h-full lg:rounded-none absolute right-0  rounded-tl-[50px] transition-all duration-200">
+      <header
+        class=" px-5 py-3 lg:pt-10 flex lg:rounded-none  rounded-tl-[50px] items-end justify-between gap-x-16 sticky top-0 z-10 right-0 bg-white dark:bg-dark2  lg:w-full lg:m-0 sm:px-4 sm:py-3 lg:static lg:dark:bg-dark1 dark:border-b-dark3 sm:border-t-2 sm:border-slate-300 ">
+
+        <div
+          class="flex items-center  sm:px-6 sm:py-3 p-4 gap-x-3 w-full lg:max-w-full lg:border border-slate-600 rounded-xl">
+          <div class="arrow p-2">
+            <img src="./assets/left.png" alt="left Logo" class="h-9 cursor-pointer lg:hidden divarrowl" />
+            <img src="./assets/right.png" alt="right Logo" class="h-9 cursor-pointer lg:hidden hidden divgear" />
+          </div>
+
+          <div class="ml-auto lg:mx-auto">
+
+            <h4
+              class="font-semibold px-5 py-2 dark:text-slate-700 rounded-md  dark:bg-slate-300 bg-slate-700 text-white">
+              New Chat
+            </h4>
+
+          </div>
+        </div>
+
+
+      </header>
+
+
+
+      <!-- This is the main content with heading "Deployments" -->
+
+      <main class=" w-[100%] ">
+
+        <div class="w-[100%] h-full flex flex-col items-start gap-y-4 ">
+          <div
+            class="p-4 ml-4 max-w-[70%] mt-3 dark:bg-slate-400 dark:text-slate-100 text-slate-400 bg-slate-100 rounded-lg self-start">
+            <!-- Left-aligned message content -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dignissimos est nihil atque nemo accusantium
+            at eius blanditiis qui iste? Rem saepe consequuntur eveniet maiores similique iste obcaecati exercitationem
+            repudiandae.
+          </div>
+          <div
+            class="p-4 mr-4 max-w-[70%] mt-3 dark:bg-slate-400 dark:text-slate-100 text-slate-400 bg-slate-100 rounded-lg self-end">
+            <!-- Right-aligned message content -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dignissimos est nihil atque nemo accusantium
+            at eius blanditiis qui iste? Rem saepe consequuntur eveniet maiores similique iste obcaecati exercitationem
+            repudiandae.
+          </div>
+        </div>
+
+      </main>
+
+
+
+      <div
+        class="absolute bottom-6 p-2  self-center ml-14 md:ml-0 flex items-center justify-center w-[85%] sm:w-[100%]">
+
+        <!-- Chat Input Field -->
+        <div class="  flex justify-between w-[90%] sm:w-[90%] p-1 rounded-lg shadow-lg bg-slate-700">
+
+          <input type="text"
+            class="flex-grow px-3 py-1 w-[80%] bg-transparent text-black dark:text-white focus:outline-none"
+            placeholder="Type your message...">
+          <i class=" cursor-pointer   p-4  text-slate-50 fas fa-paper-plane"></i>
+
+        </div>
+
+      </div>
+
+
+
+      </main>
+    </div>
+  </section>
+
+
+
+
+  <!-- Sidebar Script -->
+  <script>
+    const mobileSidebarExpandButton = document.getElementById(
+      "mobileSidebarExpandButton",
+    );
+    const mobileSidebarShrinkButton = document.getElementById(
+      "mobileSidebarShrinkButton",
+    );
+    const sidebar = document.getElementById("sidebar");
+
+    const expandSidebar = () => {
+      sidebar.classList.remove("-left-full");
+      sidebar.classList.add("left-0");
+      document.body.style.overflowY = "hidden";
+    };
+    const shrinkSidebar = () => {
+      sidebar.classList.remove("left-0");
+      sidebar.classList.add("-left-full");
+      document.body.style.overflowY = "visible";
+    };
+
+    mobileSidebarExpandButton.addEventListener("click", expandSidebar);
+    mobileSidebarShrinkButton.addEventListener("click", shrinkSidebar);
+
+    const divarrow = document.querySelector('.divarrowl');
+    const divgear = document.querySelector('.divgear');
+    const dived = document.querySelector('.chat-bot-div');
+    const arrow = document.querySelector('.arrow');
+
+    arrow.addEventListener('click', () => {
+      if (divarrow.classList.contains('hidden')) {
+        divarrow.classList.remove('hidden');
+        divgear.classList.add('hidden');
+        dived.style.width = '70%';
+      } else {
+        divarrow.classList.add('hidden');
+        divgear.classList.remove('hidden');
+        dived.style.width = '99%';
+        console.log('Subhan');
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
